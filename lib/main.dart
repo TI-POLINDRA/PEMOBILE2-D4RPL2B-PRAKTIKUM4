@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/login_screen.dart';
+import 'package:pemobile2_d4rpl3b_praktikum4/screens/onboarding_screen.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/utils/router_check.dart';
 
 void main() {
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
           routes: {
             '/': (context) => const RouterCheck(),
             '/login': (context) => const LoginScreen(),
+            '/onboarding': (context) => OnboardingScreen(),
           },
         );
       },
