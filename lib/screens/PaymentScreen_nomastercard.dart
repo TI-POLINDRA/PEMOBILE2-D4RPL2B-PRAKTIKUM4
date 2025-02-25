@@ -4,7 +4,6 @@ void main() {
   runApp(MyApp());
 }
 
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -52,7 +51,7 @@ class PaymentScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Icon(Icons.credit_card, size: 50, color: Colors.orange),
+                    Icon(Icons.credit_card, size: 50, color: Color(0xFFFF7622)),
                     SizedBox(height: 10),
                     Text(
                       'No master card added',
@@ -65,7 +64,7 @@ class PaymentScreen extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       child: Text('+ ADD NEW',
-                          style: TextStyle(color: Colors.orange)),
+                          style: TextStyle(color: Color(0xFFFF7622))),
                     )
                   ],
                 ),
@@ -81,7 +80,7 @@ class PaymentScreen extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.orange,
+                  backgroundColor: Color(0xFFFF7622),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -106,7 +105,7 @@ class PaymentScreen extends StatelessWidget {
     return Column(
       children: [
         CircleAvatar(
-          backgroundColor: selected ? Colors.orange : Colors.grey.shade300,
+          backgroundColor: selected ? Color(0xFFFF7622) : Colors.grey.shade300,
           child: Icon(icon, color: selected ? Colors.white : Colors.black),
         ),
         SizedBox(height: 5),
