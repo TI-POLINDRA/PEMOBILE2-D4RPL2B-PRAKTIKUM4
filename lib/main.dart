@@ -28,7 +28,6 @@ class MyApp extends StatelessWidget {
             '/': (context) => const RouterCheck(),
             '/login': (context) => const LoginScreen(),
             '/nomastercard': (context) => PaymentScreen(),
-            '/payment': (context) => PaymentScreen(),
           },
         );
       },
