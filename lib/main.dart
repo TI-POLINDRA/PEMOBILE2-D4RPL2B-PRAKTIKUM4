@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/login_screen.dart';
+import 'package:pemobile2_d4rpl3b_praktikum4/screens/search_screen.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/utils/router_check.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/profile_screen.dart';
+import 'package:pemobile2_d4rpl3b_praktikum4/screens/PaymentScreen_nomastercard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,6 +30,9 @@ class MyApp extends StatelessWidget {
             '/': (context) => const RouterCheck(),
             '/login': (context) => const LoginScreen(),
             '/profile': (context) => const ProfileScreen(),
+            '/nomastercard': (context) => PaymentScreen(),
+            '/payment': (context) => PaymentScreen(),
+            '/search': (context) => const SearchScreen(),
           },
         );
       },
