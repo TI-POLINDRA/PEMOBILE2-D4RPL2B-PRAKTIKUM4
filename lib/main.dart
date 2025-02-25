@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pemobile2_d4rpl3b_praktikum4/features/food%20details%20V2/food_details_v2_screen.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/login_screen.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/utils/router_check.dart';
 
@@ -26,6 +27,8 @@ class MyApp extends StatelessWidget {
           routes: {
             '/': (context) => const RouterCheck(),
             '/login': (context) => const LoginScreen(),
+            '/food_details_v2': (context) => const FoodDetailsV2Screen(),
+
           },
         );
       },
