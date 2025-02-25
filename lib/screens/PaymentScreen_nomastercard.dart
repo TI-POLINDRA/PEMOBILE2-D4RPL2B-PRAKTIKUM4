@@ -35,10 +35,11 @@ class PaymentScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                _paymentMethodIcon(Icons.money, 'Cash'),
-                _paymentMethodIcon(Icons.credit_card, 'Visa'),
-                _paymentMethodIcon(Icons.credit_card, 'Mastercard', selected: true),
-                _paymentMethodIcon(Icons.account_balance_wallet, 'PayPal'),
+                _paymentMethodIcon('assets/images/Cash.png', 'Cash'),
+                _paymentMethodIcon('assets/images/Visa.png', 'Visa'),
+                _paymentMethodIcon('assets/images/Mastercard.png', 'Mastercard',
+                    selected: true),
+                _paymentMethodIcon('assets/images/Paypal.png', 'PayPal'),
               ],
             ),
             SizedBox(height: 20),
@@ -51,7 +52,8 @@ class PaymentScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Icon(Icons.credit_card, size: 50, color: Color(0xFFFF7622)),
+                    Image.asset('assets/images/Clipped.png',
+                        width: 100, height: 100),
                     SizedBox(height: 10),
                     Text(
                       'No master card added',
@@ -60,20 +62,40 @@ class PaymentScreen extends StatelessWidget {
                     SizedBox(height: 5),
                     Text('You can add a mastercard and save it for later',
                         textAlign: TextAlign.center),
-                    SizedBox(height: 10),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text('+ ADD NEW',
-                          style: TextStyle(color: Color(0xFFFF7622))),
-                    )
                   ],
                 ),
               ),
             ),
+            SizedBox(height: 10),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Container(
+                width: 327,
+                height: 62,
+                decoration: BoxDecoration(
+                  color: Color(0xFFF0F5FA),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Center(
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text('+ ADD NEW',
+                        style: TextStyle(color: Color(0xFFFF7622))),
+                  ),
+                ),
+              ),
+            ),
             Spacer(),
-            Text(
-              'TOTAL:   \$96',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            Row(
+              children: [
+                Text('TOTAL',
+                    style: TextStyle(fontSize: 14, color: Color(0xFFA0A5BA))),
+                SizedBox(width: 8),
+                Text('\$96',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              ],
             ),
             SizedBox(height: 10),
             SizedBox(
@@ -90,7 +112,10 @@ class PaymentScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(12.0),
                   child: Text(
                     'PAY & CONFIRM',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
                   ),
                 ),
               ),
@@ -101,15 +126,35 @@ class PaymentScreen extends StatelessWidget {
     );
   }
 
-  Widget _paymentMethodIcon(IconData icon, String label, {bool selected = false}) {
+  Widget _paymentMethodIcon(String imagePath, String label,
+      {bool selected = false}) {
     return Column(
       children: [
-        CircleAvatar(
-          backgroundColor: selected ? Color(0xFFFF7622) : Colors.grey.shade300,
-          child: Icon(icon, color: selected ? Colors.white : Colors.black),
+        Stack(
+          alignment: Alignment.topRight,
+          children: [
+            Container(
+              padding: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Color(0xFFF0F5FA),
+                borderRadius: BorderRadius.circular(16),
+                border: selected ? Border.all(color: Color(0xFFFF7622), width: 2) : null,
+              ),
+              child: Image.asset(imagePath, width: 30, height: 30),
+            ),
+            if (selected)
+              Container(
+                padding: EdgeInsets.all(2),
+                decoration: BoxDecoration(
+                  color: Color(0xFFFF7622),
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(Icons.check, color: Colors.white, size: 16),
+              ),
+          ],
         ),
         SizedBox(height: 5),
-        Text(label, style: TextStyle(fontSize: 12)),
+        Text(label, style: TextStyle(fontSize: 14)),
       ],
     );
   }
