@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pemobile2_d4rpl3b_praktikum4/screens/forgot_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -32,7 +33,29 @@ class LoginScreen extends StatelessWidget {
                   hintText: 'Password',
                 ),
               ),
-              SizedBox(height: 20.h),
+              SizedBox(height: 10.h),
+
+              /// Tombol "Forgot Password"
+              Align(
+                alignment: Alignment.centerRight,
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ForgotPasswordScreen(),
+                      ),
+                    );
+                  },
+                  child: Text(
+                    "Forgot Password?",
+                    style: TextStyle(fontSize: 14.sp, color: Colors.blue),
+                  ),
+                ),
+              ),
+              SizedBox(height: 10.h),
+
+              /// Tombol Login
               ElevatedButton(
                 onPressed: () {
                   // Navigate to home screen
