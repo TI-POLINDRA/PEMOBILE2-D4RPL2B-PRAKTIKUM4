@@ -34,7 +34,10 @@ class LoginScreen extends StatelessWidget {
               ),
               SizedBox(height: 20.h),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  // Navigate to home screen
+                  Navigator.pushNamed(context, "/profile");
+                },
                 child: Text("Login", style: TextStyle(fontSize: 18.sp)),
               ),
             ],
