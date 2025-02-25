@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/features/food%20details%20V2/food_details_v2_screen.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/login_screen.dart';
+import 'package:pemobile2_d4rpl3b_praktikum4/screens/verification_page.dart';
+import 'package:pemobile2_d4rpl3b_praktikum4/screens/search_screen.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/utils/router_check.dart';
+import 'package:pemobile2_d4rpl3b_praktikum4/screens/PaymentScreen_nomastercard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +31,10 @@ class MyApp extends StatelessWidget {
             '/': (context) => const RouterCheck(),
             '/login': (context) => const LoginScreen(),
             '/food_details_v2': (context) => const FoodDetailsV2Screen(),
-
+            '/verif': (context) => VerificationPage(),
+            '/nomastercard': (context) => PaymentScreen(),
+            '/payment': (context) => PaymentScreen(),
+            '/search': (context) => const SearchScreen(),
           },
         );
       },
