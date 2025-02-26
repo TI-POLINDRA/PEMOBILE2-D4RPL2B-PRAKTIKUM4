@@ -5,10 +5,10 @@ class RouterCheck extends StatefulWidget {
   const RouterCheck({super.key});
 
   @override
-  _RouterCheckState createState() => _RouterCheckState();
+  RouterCheckState createState() => RouterCheckState();
 }
 
-class _RouterCheckState extends State<RouterCheck> {
+class RouterCheckState extends State<RouterCheck> {
   final TextEditingController _controller = TextEditingController();
 
   @override
@@ -37,7 +37,7 @@ class _RouterCheckState extends State<RouterCheck> {
                 onPressed: () {
                   String route = _controller.text;
                   if (route.isNotEmpty) {
-                    print('Goto Route : ${route}');
+                    print('Goto Route : $route');
                     Navigator.pushNamed(context, route);
                   }
                 },
