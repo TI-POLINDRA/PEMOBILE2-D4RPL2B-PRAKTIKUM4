@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "C:\\Program Files\\Android\\flutter\\packages\\flutter_tools\\gradle\\src\\main\\groovy\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\gustian\\AppData\\Local\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "D:\\laragon\\www\\kuliah\\pemrograman_mobile\\PEMOBILE2-D4RPL2B-PRAKTIKUM4\\android\\app\\.cxx\\Debug\\36b6o4xu\\armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\gustian\\AppData\\Local\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "D:\\laragon\\www\\kuliah\\pemrograman_mobile\\PEMOBILE2-D4RPL2B-PRAKTIKUM4\\android\\app\\.cxx\\Debug\\36b6o4xu\\armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
           initialRoute: '/',
           routes: {
             '/': (context) => const RouterCheck(),
-            '/login': (context) => const LoginScreen(),
+            '/login': (context) => LoginScreen(),
 
             '/homev3': (context) => const HomeViewV3(),
             '/profile': (context) => const ProfilScreen(),
