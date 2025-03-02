@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+
 class RouterCheck extends StatefulWidget {
   const RouterCheck({super.key});
 
@@ -37,7 +38,7 @@ class _RouterCheckState extends State<RouterCheck> {
                 onPressed: () {
                   String route = _controller.text;
                   if (route.isNotEmpty) {
-                    print('Goto Route : ${route}');
+                    print('Goto Route : $route');
                     Navigator.pushNamed(context, route);
                   }
                 },
