@@ -9,6 +9,8 @@ import 'package:pemobile2_d4rpl3b_praktikum4/utils/router_check.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/profil_screen.dart'; 
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/personalProfiles.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/PaymentScreen_nomastercard.dart';
+import 'package:pemobile2_d4rpl3b_praktikum4/screens/my_orders.dart';
+
 
 
 void main() {
@@ -44,6 +46,8 @@ class MyApp extends StatelessWidget {
             '/nomastercard': (context) => PaymentScreen(),
             '/payment': (context) => PaymentScreen(),
             '/search': (context) => const SearchScreen(),
+
+            '/myorders': (context) => const MyOrdersPage(),
 
           },
         );
