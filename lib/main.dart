@@ -9,7 +9,7 @@ import 'package:pemobile2_d4rpl3b_praktikum4/utils/router_check.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/profil_screen.dart'; 
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/personalProfiles.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/PaymentScreen_nomastercard.dart';
-
+import 'package:pemobile2_d4rpl3b_praktikum4/screens/food_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,16 +35,15 @@ class MyApp extends StatelessWidget {
           routes: {
             '/': (context) => const RouterCheck(),
             '/login': (context) => LoginScreen(),
-
             '/homev3': (context) => const HomeViewV3(),
             '/profile': (context) => const ProfilScreen(),
-            '/Onboarding': (context) =>  OnboardingScreen(),
-            '/PersonalProfil':(context) => ProfileScreen(),
+            '/Onboarding': (context) => OnboardingScreen(),
+            '/PersonalProfil': (context) => ProfileScreen(),
             '/verif': (context) => VerificationPage(),
             '/nomastercard': (context) => PaymentScreen(),
             '/payment': (context) => PaymentScreen(),
             '/search': (context) => const SearchScreen(),
-
+            '/food': (context) => const FoodScreen(), 
           },
         );
       },
