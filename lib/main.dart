@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/Onboarding3.dart';
+import 'package:pemobile2_d4rpl3b_praktikum4/screens/chat_screen.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/login_screen.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/home_view_v3.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/verification_page.dart';
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
             '/nomastercard': (context) => PaymentScreen(),
             '/payment': (context) => PaymentScreen(),
             '/search': (context) => const SearchScreen(),
-
+            '/chat': (context) => ChatScreen(),
           },
         );
       },
