@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/login_screen.dart';
+import 'package:pemobile2_d4rpl3b_praktikum4/screens/edit_profile.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/utils/router_check.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +20,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
@@ -25,7 +28,8 @@ class MyApp extends StatelessWidget {
           initialRoute: '/',
           routes: {
             '/': (context) => const RouterCheck(),
-            '/login': (context) => const LoginScreen(),
+            '/login': (context) => LoginScreen(),
+            '/edit_profile': (context) => EditProfileScreen(),
           },
         );
       },
