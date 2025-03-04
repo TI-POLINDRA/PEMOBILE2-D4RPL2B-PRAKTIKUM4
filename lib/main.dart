@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/login_screen.dart';
+import 'package:pemobile2_d4rpl3b_praktikum4/screens/address.dart';
+import 'package:pemobile2_d4rpl3b_praktikum4/screens/payment_method.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/utils/router_check.dart';
 
 void main() {
@@ -22,10 +24,12 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
           ),
-          initialRoute: '/',
+          initialRoute: '/', // Tetap menggunakan RouterCheck
           routes: {
             '/': (context) => const RouterCheck(),
             '/login': (context) => const LoginScreen(),
+            '/address': (context) => AddressScreen(), // Tambahkan route Address
+            '/payment': (context) => PaymentScreen(), // Tambahkan route Payment
           },
         );
       },
