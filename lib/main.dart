@@ -10,6 +10,8 @@ import 'package:pemobile2_d4rpl3b_praktikum4/screens/profil_screen.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/personalProfiles.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/PaymentScreen_nomastercard.dart';
 import 'package:pemobile2_d4rpl3b_praktikum4/screens/food_screen.dart';
+import 'package:pemobile2_d4rpl3b_praktikum4/screens/add_new_address.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
           ),
-          initialRoute: '/',
+          initialRoute: '/addnewaddress',
           routes: {
             '/': (context) => const RouterCheck(),
             '/login': (context) => LoginScreen(),
@@ -43,7 +45,8 @@ class MyApp extends StatelessWidget {
             '/nomastercard': (context) => PaymentScreen(),
             '/payment': (context) => PaymentScreen(),
             '/search': (context) => const SearchScreen(),
-            '/food': (context) => const FoodScreen(), 
+            '/food': (context) => const FoodScreen(),
+            '/addnewaddress': (Context) => AddNewAddressScreen(), 
           },
         );
       },
